@@ -15,7 +15,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>AGAPE - zestawienia</title>
+    <title>RESTAURANT - zestawienia</title>
     <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="css/tabela.css" />

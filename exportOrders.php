@@ -23,7 +23,7 @@ session_start();
 
                 $obj_pdf = new TCPDF('P', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);  
                 $obj_pdf->SetCreator(PDF_CREATOR);  
-                $obj_pdf->SetTitle("AGAPE zamówienia");  
+                $obj_pdf->SetTitle("RESTAURANT zamówienia");  
                 $obj_pdf->SetHeaderData('', '', PDF_HEADER_TITLE, PDF_HEADER_STRING);  
                 $obj_pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));  
                 $obj_pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));  
@@ -38,9 +38,9 @@ session_start();
                 $content = '';
                 if($since == $to)
                 {
-                    $content .= '<h3 align="center">Zamówienia AGAPE '.$since.'</h3><br /><br />'; 
+                    $content .= '<h3 align="center">Zamówienia RESTAURANT '.$since.'</h3><br /><br />'; 
                 }else{
-                    $content .= '<h3 align="center">Zamówienia AGAPE od '.$since.' do '.$to.'</h3><br /><br />'; 
+                    $content .= '<h3 align="center">Zamówienia RESTAURANT od '.$since.' do '.$to.'</h3><br /><br />'; 
                 }
                 
                 $content .= '<h4 color= "red" align="center">raport wygenerowano '.date("Y-m-d_H:i:s").'</h4>';
@@ -90,7 +90,7 @@ session_start();
                             </div>
                         </div>';
                 }
-                $filename = "AGAPE-zamowienia-".$since."-".$to."-".date("Y-m-d_H:i:s").".pdf";
+                $filename = "RESTAURANT-zamowienia-".$since."-".$to."-".date("Y-m-d_H:i:s").".pdf";
                 $obj_pdf->writeHTML($content);  
                 $obj_pdf->Output($filename, 'I');   
     }

@@ -20,7 +20,7 @@ session_start();
 	{
                 $obj_pdf = new TCPDF('P', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);  
                 $obj_pdf->SetCreator(PDF_CREATOR);  
-                $obj_pdf->SetTitle("AGAPE statystyki pracowników");  
+                $obj_pdf->SetTitle("RESTAURANT statystyki pracowników");  
                 $obj_pdf->SetHeaderData('', '', PDF_HEADER_TITLE, PDF_HEADER_STRING);  
                 $obj_pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));  
                 $obj_pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));  
@@ -82,7 +82,7 @@ session_start();
 
                 $content .= '<h4 color= "red" align="center">Łącznie zamówień: '.$summary.'</h4>';
 
-                $filename = "AGAPE-pracownicy-".date("Y-m-d_H:i:s").".pdf";
+                $filename = "RESTAURANT-pracownicy-".date("Y-m-d_H:i:s").".pdf";
                 $obj_pdf->writeHTML($content);  
                 $obj_pdf->Output($filename, 'I');   
     }
