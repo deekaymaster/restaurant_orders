@@ -137,7 +137,8 @@ session_start();
                 $content .= '</table></div>';
 
                 $filename = "RESTAURANT-zestawienia-".$since."-".$to."-".date("Y-m-d_H:i:s").".pdf";
-                $obj_pdf->writeHTML($content);  
+                $obj_pdf->writeHTML($content);
+                ob_end_clean(); // blokujemy wysyłanie danych wyjściowych do przeglądarki
                 $obj_pdf->Output($filename, 'I');   
     }
 

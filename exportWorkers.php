@@ -83,7 +83,8 @@ session_start();
                 $content .= '<h4 color= "red" align="center">Łącznie zamówień: '.$summary.'</h4>';
 
                 $filename = "RESTAURANT-pracownicy-".date("Y-m-d_H:i:s").".pdf";
-                $obj_pdf->writeHTML($content);  
+                $obj_pdf->writeHTML($content);
+                ob_end_clean(); // blokujemy wysyłanie danych wyjściowych do przeglądarki
                 $obj_pdf->Output($filename, 'I');   
     }
 
